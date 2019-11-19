@@ -19,14 +19,14 @@ else {
 
 "`n"
 
-<# vCenter login (Option 1 - PROMPT) 
+# vCenter login (Option 1 - PROMPT) 
 $viServer = Read-Host -Prompt 'vCenter (FQDN)'
 Write-Host 'Please wait for login prompt...'
 Connect-VIServer $viServer 
-#>
+#
 
 
-# vCenter login (Option 2 - Predefined List) - to be improved
+<# vCenter login (Option 2 - Predefined List) - to be improved
 $vi0 = "vcsa101.atomiclab.one", "administrator@vsphere.local", "VMware1!"
 $vi1 = "vcsa102.atomiclab.one", "administrator@vsphere.local", "VMware1!"
 $vi2 = "vcsa103.atomiclab.one", "administrator@vsphere.local", "VMware1!"
@@ -47,8 +47,8 @@ elseif ($vSelect -eq 2) {$viserver = $vi2}
 else {Write-Host "none"}
 
 Connect-VIServer $viserver[0] -User $viserver[1] -Password $viserver[2]
-
 # End vCenter login (Option 2 - Predefined List)
+#>
 
 "`n"
 
