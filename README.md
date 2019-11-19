@@ -3,7 +3,7 @@ VMware PowerCLI VDS/VS portgroup remap
 
 This Powershell file utilizes VMware PowerCLI module to automate port mapping between both Virtual Distributed Switch and Virtual Switch portgroups to reduce the chances of human error if it was done manually.
 
-
+This script does not create any portgroup and assume that all Target portgroups has been created before hand.
 
 The logic of the script is:
 1) login to vCenter (via Option 1 - Prompt or Option 2 - from a predefined list).
