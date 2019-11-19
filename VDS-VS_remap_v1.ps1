@@ -1,10 +1,3 @@
-﻿<#
-v1.3.1 - change to portgroup
-v1.3.1b - change some wording
-v2.0.0 - content cleanup
-v2.3.0 - further cleanup, added fallback, removed functions
-#>
-
 # clear variables, clear screen
 rv * -ea SilentlyContinue; rmo *; $error.Clear(); cls
 
@@ -34,9 +27,9 @@ Connect-VIServer $viServer
 
 
 # vCenter login (Option 2 - Predefined List) - to be improved
-$vi0 = "a-vcsa101.atomiclab.one", "ab1@vsphere.local", "P@ssw0rd"
-$vi1 = "172.30.153.22", "administrator@vsphere.local", "case@580K"
-$vi2 = "a-vcsa201.atomiclab.one", "administrator@vsphere.local", "P@ssw0rd"
+$vi0 = "vcsa101.atomiclab.one", "administrator@vsphere.local", "VMware1!"
+$vi1 = "vcsa102.atomiclab.one", "administrator@vsphere.local", "VMware1!"
+$vi2 = "vcsa103.atomiclab.one", "administrator@vsphere.local", "VMware1!"
 
 
 $vSelect = ""
